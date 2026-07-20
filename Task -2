@@ -1,0 +1,225 @@
+// 1. Employee Profile
+let Name="Sivaganesh Kodedala";
+let Employee_ID = "EMP2252";
+let Department = "Front End";
+let Salary = 25000;
+let Permanent = true;
+console.log("Name : "+Name); // Name : Sivaganesh Kodedala
+console.log("Employee ID : "+Employee_ID); //Employee ID : EMP2252
+console.log("Department : "+Department); // Department : Front End
+console.log("Salary : "+Salary); //Salary : 25000
+console.log("Is Permanent : "+Permanent); //Is Permanent : true
+
+// 2. Student Details
+let Student_Details ={
+    Name : "Kodedala Sivaganesh",
+    Age : 24,
+    Course : "ECE",
+    College : "Vel Tech University",
+    Passed : 2024
+
+}
+
+console.log("Student Name : "+Student_Details.Name); //Student Name : Kodedala Sivaganesh
+console.log("Course : "+Student_Details.Course); // Course : ECE
+console.log("Passed Year : "+Student_Details.Passed); // Passed Year : 2024
+
+
+// 3. Shopping Cart
+let Cart = ["Milk", "Rice", "Oil", "Sugar", "Soap"];
+console.log("First Product : "+Cart[0]); // First Product : Milk
+console.log("Third Product : "+Cart[2]); // Third Product : Oil
+console.log("Last Product : "+Cart[Cart.length-1]); //  Last Product : Soap
+console.log("Total : "+Cart.length); // Total : 5
+
+
+// 4. Company Employee Database
+let Employee_Date = {
+    Name : "Kodedala Sivaganesh",
+    Designation : "Fullstack Developer",
+    Salary : 25000,
+    Skills : ["HTMl", "CSS", "Javascript", "Python", "SQL"]
+};
+console.log("Employee Name : "+Employee_Date.Name); // Employee Name : Kodedala Sivaganesh
+console.log("Designation : "+Employee_Date.Designation); // Designation : Fullstack Developer
+console.log("Second Skill : "+Employee_Date.Skills[1]); // Second Skill : CSS
+
+// 5. Salary Calculation
+let Basic_Salary = 25000;
+let Bonus = 5000;
+let Total_Salary = Basic_Salary+Bonus;
+console.log("Total Salary Expected : "+Total_Salary); // Total Salary Expected : 30000
+
+// 6. GST Calculator
+let Product_Price = 4500;
+let GST = 18;
+let GST_Amount = (4500*18)/100;
+let Final_Amount = Product_Price+GST_Amount;
+console.log("GST Amount : "+GST_Amount); // GST Amount : 810
+console.log("Final Amount : " +Final_Amount); // Final Amount : 5310
+
+// 7. Even or Odd
+let Number = 25;
+let Result = (25/2 ==0)? "Even Number": "Odd Number";
+console.log("Output : "+Result); // Output : Odd Number
+
+// 8.  Login System
+let User_Name = "Siva";
+let Password = 1234;
+let result = (User_Name == "Siva" && Password==1234) ? "Login Successfully":"Invalid Credentials"; // Login Successfully
+let result2 = (User_Name == "Siva" && Password==1243) ? "Login Successfully":"Invalid Credentials"; // Invalid Credentials
+console.log(result);
+console.log(result2);
+
+// 9. Voting Eligibility
+let Age = 22;
+let Eligibility = (Age >=18) ? "Eligible for Vote" : "Not Eligible for Vote";
+console.log("Eligibility : "+Eligibility); // Eligibility : Eligible for Vote
+
+// 10. EMI Eligibility
+let Salary = 40000;
+let Experience = 4;
+let Eligibility = (Salary>30000 && Experience>=2) ? "Eligible for EMI" : "Not Eligible" ;
+console.log("Eligibility : "+Eligibility); // Eligibility : Eligible for EMI
+
+// 11. Product Discount
+let Price = 5000;
+let Discount = 10;
+let Discount_Amount = (5000*10)/100;
+let Final_Amount = Price - Discount_Amount;
+console.log("Discount Amount : "+Discount_Amount); // Discount Amount : 500
+console.log("Final Price : "+Final_Amount); // Final Price : 4500
+
+// 12.  User Registration
+let Name = "Kodedala Sivaganesh";
+let Email = "Sivaganesh@gmail.com";
+let Phone_Number = 9036803677;
+let City = "Chennai";
+console.log("Name : "+Name); // Name : Kodedala Sivaganesh
+console.log("Email : "+Email); // Email : Sivaganesh@gmail.com
+console.log("Phone Number : "+Phone_Number); // Phone Number : 9036803677
+console.log("City : "+City); // City : Chennai
+
+// 13. Social Media Profile
+let Profile={
+    Username : "Siva25",
+    Followers : 373,
+    Following : 400,
+    Posts : 15,
+    Verified : "No"
+}
+console.log("Username : "+Profile.Username); // Username : Siva25
+console.log("Followers : "+Profile.Followers); // Followers : 373
+console.log("Verified Status : "+Profile.Verified) // Verified Status : No
+
+// 14. Restaurant Menu
+let Menu = ["Idli", "Dosa", "Poori", "Meals", "Parotta"];
+console.log("Second Item : "+Menu[1]); // Second Item : Dosa
+console.log("Fourth Item : "+Menu[3]); // Fourth Item : Meals
+console.log("Last Item : "+Menu[Menu.length-1]); // Last Item : Parotta
+
+// 15. Banking System
+let Account_Balance = 25000;
+let Withdrawal = 8000;
+let Remaining = Account_Balance - Withdrawal;
+console.log("Remaining Amount : "+Remaining); // Remaining Amount : 17000
+
+// 16. Mobile Store
+let Mobile_Price = 25000;
+let Exchange = 5000;
+let Coupon = 2000;
+let Final_Amount = Mobile_Price - (Exchange + Coupon);
+console.log("Final Amount : "+Final_Amount); // Final Amount : 18000
+
+// 17. Employee Promotion
+let Experience = 5;
+let Experience2 = 3;
+let Performance = true;
+let Promotion = (Experience >=5 && Performance == true) ? "Promotion Approved" : "Promotion Pending";
+let Promotion2 = (Experience2 >=5 && Performance == true) ? "Promotion Approved" : "Promotion Pending";
+console.log("Promotion Status : "+Promotion); // Promotion Status : Promotion Approved
+console.log("Promotion Status : "+Promotion2); // Promotion Status : Promotion Pending
+
+// 18. Movie Ticket
+let Ticket_Price = 180;
+let People=5;
+let Total_Amount = 180*5;
+console.log("Total Amount : "+Total_Amount); // Total Amount : 900
+
+// 19. Weather App
+let Temperature = 38;
+let result = (Temperature>=35) ? "Hot Day":"Normal Day";
+console.log(result); // Hot Day
+
+// 20. Mini HR Management (Real-Time)
+let Employee = {
+    Empcode : "EMP2225",
+    Name : "Sivaganesh",
+    Department : "Frontend",
+    Designation : "Fullstack Developer",
+    Salary : 25000,
+    Skills : ["HTML","CSS","JavaScript","React"],
+    Permanent : true
+}
+
+console.log("Employee Code : "+Employee.Empcode); // Employee Code : EMP2225
+console.log("Employee Name : "+Employee.Name); // Employee Name : Sivaganesh
+console.log("Department : "+Employee.Department); // Department : Frontend
+console.log("Salary : "+Employee.Salary); // Salary : 25000
+console.log("Last Skill : "+Employee.Skills[Employee.Skills.length - 1]); // Last Skill : React
+console.log("Permanent Status : "+Employee.Permanent); // Permanent Status : true
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
