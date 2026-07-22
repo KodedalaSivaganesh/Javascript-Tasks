@@ -1,0 +1,298 @@
+// 1. Employee Login System
+let User_Name = prompt("Enter your User Name "); //User_Name = "Admin"
+let Password = prompt("Enter your password");   // Password = "12345"
+
+if(User_Name == "Admin" && Password == "12345"){
+    console.log("Login Successful");                   // Login Successful
+}else{
+    console.log("Invalid Username or Password");
+}
+
+// 2. E-Commerce Discount
+let amount = 6500;
+if(amount >= 5000){
+    console.log("20% Discount Appiled")
+    let final_amount = (amount*20)/100;   // 20% Discount Appiled
+    console.log("Final Amount : "+(amount - final_amount)); // Final Amount : 5200
+}else{
+    console.log("No Discount");
+}
+
+// 3. ATM Withdrawal
+let Balance = 10000;
+let withdraw = 4000;
+if(withdraw <= Balance){
+    Balance -= withdraw;
+    console.log("Transaction Sucessful");  // Transaction Sucessful
+    console.log("Balance : "+Balance);   // Balance : 6000
+}else{
+    console.log("Insufficient Balanace");
+}
+
+// 4. Student Grade System
+let Marks = 75;
+
+if (Marks >= 90){
+    console.log("Grade A");
+}else if(Marks >= 80){
+    console.log("Grade B");
+    
+}else if(Marks >= 70){
+    console.log("Grade C")   // Grade C
+}else{
+    console.log("Fail");
+    
+}
+
+// 5. Traffic Signal
+let Signal = "Yellow";
+switch(Signal){
+    case "Red" : console.log("Stop");
+    break;
+    case "Yellow" : console.log("Start"); // Start
+    break;
+    case "Green" : console.log("Go");
+    break;
+    default: console.log("Invalid ")
+    
+}
+
+// 6. Online Shopping Delivery Charge
+let Amount = 750;
+let Delivery = 80;
+if (Amount >= 1000){
+    console.log("Free Delivery");
+    console.log("Total : "+Amount);
+}else{
+    console.log("Order Amount : "+Amount);  // Order Amount : 750
+    console.log("Delivery Fee : "+Delivery); // Delivery Fee : 80
+    Amount+=Delivery;
+    console.log("Total : "+ Amount);  // Total : 830
+}
+
+// 7. User Age Verification
+let Age = prompt("Enter your age");  // Age = 13
+if(Age>=18){
+    console.log("Eligible");
+}else{
+    console.log("Not Eligible"); // Not Eligible
+}
+
+//8.Find Largest Number
+let a = 34;
+let b = 89;
+let c = 56;
+if(a >= b && a >= c){
+    console.log("Largest Number : "+a);
+}else if (b >= a && b >= c){
+    console.log("Largest Number : "+b);  // Largest Number : 89
+}else{
+    console.log("Largest Number : "+c);
+}
+
+// 9. Mobile Password
+let pin = "1234";
+if(pin.length == 4){
+    console.log("Login Success"); // Login Success
+}else{
+    console.log("Invalid Login");
+    
+}
+
+let pin2= "12345";
+if(pin2.length == 4){
+    console.log("Login Success"); 
+}else{
+    console.log("Invalid Login"); // Invalid Login
+    
+}
+
+// 10. Product Stock
+let Stock = 1;
+if(Stock == 0){
+    console.log("Out Of Stock");
+}else{
+    console.log("Available"); // Available
+}
+
+// 11. Employee Salary Bonus
+let Salary = 60000;
+if(Salary > 50000){
+    let Bonus = 10000;
+    console.log("Total Salary with Bonus : "+(Salary + Bonus)); //Total Salary with Bonus : 70000
+}else if (Salary > 30000){
+    let Bonus = 5000;
+    console.log("Total Salary with Bonus : "+(Salary + Bonus));
+}else{
+    let Bonus = 2000;
+    console.log("Total Salary with Bonus : "+(Salary+Bonus));
+}
+
+// 12. Electricity Bill
+let units = 250;
+if(units >= 0 && units <=100){
+    console.log("Total Bill : "+(units*2));
+}else if(units >= 101 && units <= 200){
+    console.log("Total Bill : "+(units*4));
+}else{
+    console.log("Total Bill : "+(units*6)); // Total Bill : 1500
+}
+
+// 13.  Movie Ticket Booking
+let Age = 25;
+if(Age < 5){
+    console.log("Free Entry");
+}else if( Age >= 5 && Age <= 18){
+    let Price = 100;
+    console.log("Ticket Price : "+Price);
+}else{
+    let Price = 200;
+    console.log("Ticket Price : "+Price);  // Ticket Price : 200
+}
+
+// 14. Hospital Token System
+let patientType = "Normal";
+
+switch (patientType) {
+    case "Emergency": console.log("Token 1");
+        break;
+
+    case "Senior Citizen": console.log("Priority");
+        break;
+
+    case "Normal": console.log("Regular Queue");   // Regular Queue
+        break;
+
+    default: console.log("Invalid Patient Type");
+}
+
+// 15. Company Attendance
+let attendance = "Leave";
+
+switch (attendance) {
+    case "Present": console.log("Working");
+        break;
+
+    case "Leave": console.log("Leave Approved");   // Leave Approved
+        break;
+
+    case "Absent": console.log("Salary Deduction");
+        break;
+
+    default: console.log("Invalid Attendance");
+}
+
+// 16. Grocery Cart Total
+let Rice=500;
+let Sugar=300;
+let Oil=250;
+let Total = Rice + Sugar + Oil ;
+if(Total > 1000){
+    let discount = 10;
+    Final_Total = Total * 10 / 100;
+    console.log("10% Discount Applied"); // 10% Discount Applied
+    console.log("Total with Discount : "+(Total - Final_Total)); // Total with Discount : 945
+}else{
+    console.log("Total : "+Total);
+}
+
+// 17. Array
+let Products = ["Laptop", "Mouse", "Keyboard", "Monitor"];
+for(i=0;i<Products.length;i++){
+    console.log((i+1)+" "+Products[i]);
+}
+
+// 1 Laptop
+// 2 Mouse
+// 3 Keyboard
+// 4 Monitor
+
+// 18. Employee Database
+let employee={
+    name:"Rahul",
+    role:"Developer",
+    salary:50000
+}
+for(let i in employee){
+    console.log(employee[i]);
+}
+//Rahul
+//Developer
+//50000
+
+// 19. Type Casting
+let a = Number("100");
+let b = Boolean("200");
+let c = String(200);
+console.log(a); // 100
+console.log(b); // true
+console.log(c); // 200
+
+// 20. Banking Menu
+let Option = 3;
+switch(Option){
+    case 1 : console.log("Deposit");
+    break;
+    case 2 : console.log("Withdraw");
+    break;
+    case 3 : console.log("Balance"); // Balance
+    break;
+    case 4 : console.log("Exit");
+    break;
+    default: console.log("No Valid Choice");
+};
+
+
+// Employee Management System
+let employee = {
+    name: "Sivaganesh",
+    role: "Fronend Developer",
+    salary: 50000,
+    attendance: "Present"
+};
+
+let choice = 5;
+
+switch (choice) {
+    case 1:
+        console.log("Add Employee");
+        console.log("Employee Added Successfully");
+        break;
+
+    case 2:
+        console.log("Employee Details");
+        console.log("Name: " + employee.name);
+        console.log("Role: " + employee.role);
+        console.log("Salary: " + employee.salary);
+        break;
+
+    case 3:
+        console.log("Calculate Bonus");
+
+        let bonus = employee.salary * 10 / 100;
+        console.log("Bonus: " + bonus);
+        break;
+
+    case 4:
+        console.log("Check Attendance");
+
+        if (employee.attendance === "Present") {
+            console.log("Employee is Present");
+        } else {
+            console.log("Employee is Absent");
+        }
+        break;
+
+    case 5:
+        console.log("Print Salary");   // Print Salary
+        console.log("Salary: " + employee.salary); // Salary: 50000
+        break;
+
+    case 6:
+        console.log("Exit");
+        break;
+
+    default:
+        console.log("Invalid Choice");
+}
+
