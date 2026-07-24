@@ -1,0 +1,193 @@
+// 1. Student Registration Form Requirements
+let Student_Name = "Sivaganesh Kodedala";
+let Age = 25;
+let Department = "ECE";
+let CGPA = 8.0
+console.log("Student Name : "+Student_Name);  // Student Name : Sivaganesh Kodedala
+console.log("Age : "+Age);  // Age : 25
+console.log("Department : "+Department); // Department : ECE
+console.log("CGPA : "+CGPA); // CGPA : 8
+
+// 2. Employee Details Requirements
+let Employee_Details ={
+    Employee_ID : "EMP12345",
+    Employee_Name : "Sivaganesh",
+    Department : "Frontend",
+    Salary : 25000
+};
+console.log("Employee Name : "+Employee_Details.Employee_Name);  // Employee Name : Sivaganesh
+console.log("Salary : "+Employee_Details.Salary); // Salary : 25000
+
+// 3. Shopping Cart Requirements
+let Items = ["Laptop", "Mouse", "Keyboard", "Monitor", "Headset"];
+console.log(`First Product : ${Items[0]}`);  // First Product : Laptop
+console.log(`Last Product : ${Items[Items.length - 1]}`); // Last Product : Headset
+console.log(`Total Number Of Products : ${Items.length}`); // Total Number Of Products : 5
+
+// 4. Student Marks
+let First_Language = 89;
+let Second_Language = 92;
+let Mathematics = 72;
+let Science = 79;
+let Social = 95;
+let Total = First_Language + Second_Language + Mathematics + Science + Social;
+let Average = Total/5;
+console.log("Total : "+Total); // Total : 427
+console.log("Average : "+Average); // Average : 85.4
+
+// 5. Age Checker
+let Age = 16;
+if(Age >= 18){
+    console.log("Eligible for the Vote");
+    
+}else{
+    console.log("Not eligible for the Vote");  // Not eligible for the Vote
+    
+};
+
+// 6. Login System
+let User_Name = "Siva25";
+let Password = "6576";
+if(User_Name =="Siva@25" && Password=="6576"){
+    console.log("Login Successful")
+}else{
+    console.log("Invalid Username or Password"); // Invalid Username or Password
+};
+
+
+// 7. Calculator
+let a = 10;
+let b = 20;
+console.log(`Addition : ${a+b}`); // Addition : 30
+console.log(`Subtraction : ${a-b}`); // Subtraction : -10
+console.log(`Multiplication : ${a*b}`); // Multiplication : 200
+console.log(`Division : ${b/a}`); // Division : 2
+console.log(`Modulus : ${b%a}`); // Modulus : 0
+
+// 8. Electricity Bill
+let Customer_Name = "Sivaganesh";
+let units = 250;
+
+let bill = 0;
+
+if (units <= 100) {
+    bill = units * 2;
+} else if (units <= 200) {
+    bill = (100 * 2) + ((units - 100) * 4);
+} else {
+    bill = (100 * 2) + (100 * 4) + ((units - 200) * 6);
+}
+
+console.log("Customer Name: " + Customer_Name); // Customer Name: Sivaganesh
+console.log("Units Consumed: " + units); // Units Consumed: 250
+console.log("Bill Amount: ₹" + bill); // Bill Amount: ₹900
+
+// 9. Employee Salary
+let Basic_Salary = 25000;
+let Bonus = 5000;
+console.log("Basic Salary : "+Basic_Salary); // Basic Salary : 25000
+console.log("Gross : "+(Basic_Salary+Bonus)); // Gross : 30000
+
+// 10. Movie Ticket Price
+let Ticket_Price = 180;
+let Tickets = 8;
+console.log("Total Amount : "+(180*8)); // Total Amount : 1440
+
+// 11. Product Discount
+let Product_Name = "Mobile";
+let Price = 15000;
+let Discount = 0;
+let Final_Price = 0;
+if(Price > 5000){
+    Discount=20;
+    Final_Price = (Price * 20)/100;
+}else{
+    Discount = 10;
+    Final_Price = (Price*10)/100;
+};
+console.log("Original Price : "+Price); // Original Price : 15000
+console.log("Discount : "+Discount); // Discount : 20
+console.log("Final Price : "+(Price - Final_Price)); // Final Price : 12000
+
+// 12. Function Practice
+function Student_details(Name, Department, CGPA){
+    console.log("Name : "+Name);  // Name : Sivaganesh
+    console.log("Department : "+Department); // Department : ECE
+    console.log("CGPA : "+CGPA); // CGPA : 8
+}
+Student_details("Sivaganesh", "ECE",8.00);
+
+// 13. Bank Balance
+function Bank_Balance(Name, Current_Balance, Withdrawal){
+    console.log("Account Holder : "+ Name); // Account Holder : Sivaganesh
+    console.log("Current Balance : "+ Current_Balance); // Current Balance : 15000
+    console.log("Withdrawal : "+ Withdrawal); // Withdrawal : 5000
+    console.log("Remaining Balance : "+(Current_Balance - Withdrawal)); // Remaining Balance : 10000
+};
+Bank_Balance("Sivaganesh", 15000, 5000)
+
+// 14. Recharge
+function Recharge(number, amount){
+    console.log("Mobile Number : "+number); // Mobile Number : 9876543210
+    console.log("Recharge Amount : "+ amount); // Recharge Amount : 759
+    console.log("Recharge Successful"); // Recharge Successful
+}
+Recharge(9876543210, 759);
+
+// 15. Restaurant Bill
+function Restaurant_Bill(Item_name, Quantity, Price){
+    console.log("Item Name : "+Item_name); // Item Name : Biryani
+    console.log("Quantity : "+Quantity); // Quantity : 2
+    console.log("Price : "+Price); // Price : 150
+    Total = Price * Quantity;
+    console.log("Total Bill : "+Total); // Total Bill : 300
+}
+Restaurant_Bill("Biryani", 2, 150);
+
+// Employee Management System
+function Employee_Details(Name, Id, Department, Basic_Salary, Bonus, Experience, Skills) {
+
+    let Employee = {
+        Name: Name,
+        Id: Id,
+        Department: Department,
+        Basic_Salary: Basic_Salary,
+        Bonus: Bonus,
+        Experience: Experience,
+        Skills: Skills
+    };
+
+    console.log("Name : " + Employee.Name);
+    console.log("Id : " + Employee.Id);
+    console.log("Department : " + Employee.Department);
+    console.log("Basic Salary : " + Employee.Basic_Salary);
+    console.log("Bonus : " + Employee.Bonus);
+
+    Gross_Salary = Employee.Basic_Salary + Employee.Bonus;
+    console.log("Gross Salary : " + Gross_Salary);
+
+    if (Employee.Experience >= 5) {
+        console.log("Experienced Employee");
+    } else {
+        console.log("Fresher Employee");
+    }
+
+    console.log("Skills : " + Employee.Skills);
+}
+
+let Skills = ["HTML", "CSS", "Javascript", "Python", "SQL"];
+
+Employee_Details("Sivaganesh", "EMP1234", "ECE", 30000, 5000, 3, Skills);
+
+// Name : Sivaganesh
+// Id : EMP1234
+// Department : ECE
+// Basic Salary : 30000
+// Bonus : 5000
+// Gross Salary : 35000
+// Fresher Employee
+// Skills : HTML,CSS,Javascript,Python,SQL
+
+
+
+
