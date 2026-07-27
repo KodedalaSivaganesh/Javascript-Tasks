@@ -1,0 +1,220 @@
+// 1. Student Registration
+let Student_Name = "Sivaganesh Kodedala";
+let Department = "ECE";
+let CGPA = 8.5;
+let Eligible_Status = (CGPA >= 8.00) ? "Eligible" : "Not Eligible";
+console.log(`Student Name : ${Student_Name}`); // Student Name : Sivaganesh Kodedala
+console.log(`Department : ${Department}`); // Department : ECE
+console.log(`CGPA : ${CGPA}`); // CGPA : 8.5
+console.log(`Status : ${Eligible_Status}`); // Status : Eligible
+
+// 2. Online Shopping Bill
+let Product_Price = 2500;
+let Quantity = 3;
+let Total_Amount = Product_Price * Quantity;
+if(Total_Amount > 5000){
+    let Discount = (Total_Amount * 10)/100;
+    let Final_Amount = Total_Amount - Discount;
+    console.log("Total : "+Total_Amount); // Total : 7500
+    console.log("Discount : "+Discount); // Discount : 750
+    console.log("Final Price : "+Final_Amount); // Final Price : 6750
+}else{
+    console.log("Total : "+Total_Amount);
+    console.log("Discount : 0");
+    console.log("Final Price : "+Total_Amount);
+};
+
+
+// 3. Employee Salary
+let Basic_Salary = 35000;
+let Bonus = 5000;
+let Tax = 3000;
+let Net_Salary = (Basic_Salary + Bonus) - Tax;
+console.log("Basic Salary : "+Basic_Salary); // Basic Salary : 35000
+console.log("Bonus : "+Bonus); // Bonus : 5000
+console.log("Tax : "+Tax); // Tax : 3000
+console.log("Net Salary : "+Net_Salary);  // Net Salary : 37000
+
+// 4. Movie Ticket Booking
+let Movie_Name = "Coolie";
+let Ticket_Price = 180;
+let Tickets = 5;
+console.log("Movie : "+Movie_Name); // Movie : Coolie
+console.log("Tickets : "+Tickets); // Tickets : 5
+console.log("Total : "+(Ticket_Price * 5)); // Total : 900
+
+// 5. Login System
+let User_Name = "Siva@25";
+let Password = 9845;
+let Output =(User_Name == "Siva@25" && Password == 9845) ? "Login Successful" : "Invalid Username or Password";  
+console.log(Output); // Login Successful
+
+// 6. Electricity Bill
+let units = 250;
+let bill = 0;
+
+if (units <= 100) {
+    bill = units * 2;
+} else if (units <= 200) {
+    bill = (100 * 2) + ((units - 100) * 4);
+} else {
+    bill = (100 * 2) + (100 * 4) + ((units - 200) * 6);
+};
+console.log("Total Bill : "+bill); // Total Bill : 900
+
+// 7. Restaurant Order
+let Menu = ["Dosa", "Idly", "Poori", "Meals"];
+console.log(Menu[0]); // Dosa
+console.log(Menu[Menu.length - 1]); // Meals
+Menu.push("Fried Rice");
+Menu.splice(1,1); 
+console.log(Menu); // ['Dosa', 'Poori', 'Meals', 'Fried Rice']
+
+// 8. Employee Object
+let Employee ={
+    Name : "Sivaganesh",
+    Role : "Frontend Developer",
+    Salary : 25000
+};
+console.log("Employee Name : "+ Employee.Name); // Employee Name : Sivaganesh
+console.log("Role : "+Employee.Role); // Role : Frontend Developer
+console.log("Salary : "+Employee.Salary); // Salary : 25000
+
+// 9. Product Inventory
+let Products = ["Mouse","Keyboard","Monitor","CPU","Speaker"];
+for(let i=0;i<Products.length;i++){
+    console.log((i+1)+" "+Products[i]);
+}
+// 1 Mouse
+// 2 Keyboard
+// 3 Monitor
+// 4 CPU
+// 5 Speaker
+
+// 10. Function
+function area(Length, Width){
+    let Area = (Length * Width);
+    console.log("Area : "+Area);
+};
+area(20, 10); // Area : 200
+
+// 11. Bank Deposit
+let Balance = 5000;
+function deposit(amount) {
+    Balance += amount;
+    console.log("Deposit : ₹" + amount);
+}
+function withdraw(amount) {
+    Balance -= amount;
+    console.log("Withdraw : ₹" + amount);
+}
+console.log("Current Balance : ₹" + Balance); // Current Balance : ₹5000
+deposit(2000); // Deposit : ₹2000
+withdraw(1000); // Withdraw : ₹1000
+console.log("Final Balance : ₹" + Balance); // Final Balance : ₹6000
+
+// 12. Callback Function
+function addition(a, b) {
+    return a + b;
+}
+function calculate(callback, num1, num2) {
+    let result = callback(num1, num2);
+    console.log(result);  // 100
+    console.log("Calculation Completed"); // Calculation Completed
+
+};
+calculate(addition, 60, 40); 
+
+// 13. Generator Function
+function* couponCodes() {
+    yield "WELCOME10";
+    yield "SAVE20";
+    yield "SUPER30";
+    yield "BIG50";
+    yield "MEGA100";
+
+}
+
+let coupons = couponCodes();
+
+console.log(coupons.next().value); // WELCOME10
+console.log(coupons.next().value); // SAVE20
+console.log(coupons.next().value); // SUPER30
+console.log(coupons.next().value); // BIG50
+console.log(coupons.next().value); // MEGA100
+
+// 14. Currying
+function Discount(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        };
+    };
+}
+console.log(Discount(10)(20)(30)); // 60
+
+// 15. Spread Operator
+let Frontend = ["HTML", "CSS", "JS"];
+let Backend = ["Node", "Express", "MongoDB"];
+let FullStack = [...frontend, ...backend];
+console.log(FullStack); // ['HTML', 'CSS', 'JS', 'Node', 'Express', 'MongoDB']
+
+// 16. Rest Operator
+function sum(...numbers) {
+    let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+    console.log(total);
+}
+sum(10, 20, 30, 40, 50); // 150
+
+// 17.  Array Destructuring
+let colors = ["Red", "Blue", "Green", "Yellow"];
+
+let [color1, color2, color3, color4] = colors;
+
+console.log(color1); // Red
+console.log(color2); // Blue
+console.log(color3); // Green
+console.log(color4); // Yellow
+
+// 18. Object Destructuring
+let User_Details = {
+    Name: "Sivaganesh",
+    City: "Chennai",
+    Role: "Developer"
+};
+
+let { Name, City, Role } = User_Details;
+
+console.log(Name); // Sivaganesh
+console.log(City); // Chennai
+console.log(Role); // Developer
+
+// 19. Shopping Cart
+let cart = ["Mobile", "Laptop", "Watch"];
+console.log("Original Cart:", cart); // ['Mobile', 'Laptop', 'Watch']
+cart.push("Headphones");
+console.log("After push():", cart); // After push(): ['Mobile', 'Laptop', 'Watch', 'Headphones']
+cart.pop();
+console.log("After pop():", cart); // After pop():  ['Mobile', 'Laptop', 'Watch']
+cart.shift();
+console.log("After shift():", cart); // After shift(): ['Laptop', 'Watch']
+cart.unshift("Tablet");
+console.log("After unshift():", cart); // After unshift(): ['Tablet', 'Laptop', 'Watch']
+
+// 20. Product Search
+let Products = [
+    "Laptop",
+    "Mouse",
+    "Keyboard",
+    "Monitor",
+    "Speaker"
+];
+
+if (Products.includes("Monitor")) {
+    console.log("Product Available"); // Product Available
+} else {
+    console.log("Out of Stock");
+};
