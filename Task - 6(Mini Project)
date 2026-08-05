@@ -1,0 +1,18 @@
+// Mini Project Using Date
+let Birth_Date = new Date("2002-07-12");
+let Today = new Date();
+let Age = Today.getFullYear() - Birth_Date.getFullYear();
+let Current_Month = Today.getMonth();
+let Birth_Month = Birth_Date.getMonth();
+
+if (
+    Current_Month < Birth_Month ||
+    (Current_Month === Birth_Month &&
+        Today.getDate() < Birth_Date.getDate())
+) {
+    Age--;
+}
+
+console.log("Birth Date:", Birth_Date.toDateString()); // Birth Date: Fri Jul 12 2002
+console.log("Today's Date:", Today.toDateString()); // Today's Date: Wed Aug 05 2026
+console.log("Your Age:", Age); // Your Age: 24
